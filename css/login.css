@@ -1,0 +1,254 @@
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+
+
+:root{
+    --main: #f57a00;
+    --hover: #ffa850;
+    --background: #686868;
+    --font_color:#333;
+    --white:#fff;
+}
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html::-webkit-scrollbar{
+    width: 20px;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--background);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main);
+}
+
+#login-page{
+    position: relative;
+    background: url('../images/Login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+#login-page::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.6);
+   z-index: -1;
+}
+
+.login .login-header{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.login .login-header h1{
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--main);
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.login .login-header p{
+    color: var(--white);
+    font-size: 50px;
+    margin: 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.login .login-header p::after{
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--main);
+    margin: 0 auto;
+}
+
+.login .login-body {
+    margin: 0 auto;
+    width: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border: 2px solid var(--white);
+    border-radius: 8px;
+}
+
+.login .login-body .login-body-data{
+    margin-top: 20px;
+}
+
+.login .login-body .login-body-data label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.login .login-body .login-body-data input{
+    width: 100%;
+    height: 30px;
+    border: 2px solid var(--main);
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+.login-btn{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.login-btn .login-btn-submit{
+    font-size: 20px;
+    padding: 10px 30px;
+    background: var(--main);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.login-btn .login-btn-submit:hover{
+    background: var(--hover);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, .5);
+}
+
+
+/* ......................
+        index.html
+...................... */
+
+.header{
+    width: 100%;
+    height: 20px;
+    background: var(--main);
+}
+
+.banner{
+    position: relative;
+    background: url('../images/haomepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Make sure it covers the background */
+}
+
+.homepage-container{
+    width: 100%;
+    max-width: 900px;
+    height: 70vh;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.banner-header h1{
+    font-size: 100px;
+    color: var(--main);
+    line-height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-header p{
+    font-size: 40px;
+    color: var(--main);
+    text-transform: uppercase;
+    line-height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-header-line{
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+}
+
+.banner-icons{
+    margin-top: 100px;
+}
+
+.banner-icons a{
+    font-size: 25px;
+    margin-left: 40px;
+    padding: 7px 15px;
+    background: rgba(0, 0, 0, .8);
+    color: #bababa;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-icons a:first-child{
+    margin-left: 0;
+}
+
+
+.banner-icons a:hover{
+    color: var(--white);
+    font-size: 25px;
+    background: var(--hover);
+    transition: .5s all;
+}
+
+.homepage-container-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.homepage-icon{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.homepage-icon .homepage-icon-sub{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    font-size: 50px;
+    background: var(--main);
+    color: var(--white);
+    /* padding-left: 14px; */
+    padding-top: 5px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.homepage-icon h3{
+    margin-bottom: 20px;
+}
+
+.homepage-icon p{
+    color: #848484;
+}
